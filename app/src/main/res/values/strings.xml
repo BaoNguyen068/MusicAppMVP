@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">MusicAppMVP</string>
+
+    <string name="action_intent_listsong">List Song</string>
+    <string name="action_intent_music_receiver">Action Music Receiver</string>
+    <string name="action_intent_send_data_activity">Send Data To Activity</string>
+    <string name="action_bundle_music">Action Bundle Music</string>
+    <string name="action_intent_music_service">Music From Service</string>
+
+    <string name="info_channel_id">Chanel ID</string>
+    <string name="info_channel_name">Chanel Name</string>
+
+    <string name="msg_remind">REMIND</string>
+    <string name="title_homepage">DANH SÁCH BÀI HÁT</string>
+    <string name="object_song">Object Song</string>
+    <string name="status_isplay">Status IsPlay</string>
 </resources>

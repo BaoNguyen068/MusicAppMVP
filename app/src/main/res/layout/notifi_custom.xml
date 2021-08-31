@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/coler_as_red">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".60"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textview_title_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/coler_grey"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_7"
+            android:textSize="@dimen/dp_22"/>
+        <TextView
+            android:id="@+id/textview_author_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp_16"
+            android:singleLine="true"
+            android:textColor="@color/coler_grey"
+            android:layout_marginTop="@dimen/dp_7"
+            android:layout_marginLeft="@dimen/dp_5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/button_prev"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_previous"/>
+        <ImageView
+            android:id="@+id/button_pause"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pause"/>
+        <ImageView
+            android:id="@+id/button_next"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_next"/>
+        <ImageView
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_quit"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

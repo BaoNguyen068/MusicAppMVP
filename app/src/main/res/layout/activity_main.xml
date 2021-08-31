@@ -1,18 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/background_homepage">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/relativebaihathot"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/coler_yellow">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/danhsachbh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_homepage"
+            android:gravity="center"
+            android:textColor="@color/coler_as_red"
+            android:textSize="@dimen/dp_30"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_listsong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativebaihathot"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    
+    <LinearLayout
+        android:id="@+id/linearlayout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/coler_yellow"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".60"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview_title_song_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/coler_as_red"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_7"
+                android:textSize="@dimen/sp_28"/>
+            <TextView
+                android:id="@+id/textview_author_song_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dp_20"
+                android:singleLine="true"
+                android:textColor="@color/coler_as_red"
+                android:layout_marginTop="@dimen/dp_7"
+                android:layout_marginLeft="@dimen/dp_5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/button_prev_home"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_previous"/>
+            <ImageView
+                android:id="@+id/button_pause_home"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pause"/>
+            <ImageView
+                android:id="@+id/button_next_home"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_next"/>
+            <ImageView
+                android:id="@+id/button_cancel_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_quit"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
